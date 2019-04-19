@@ -44,3 +44,6 @@ TagManager:
   - name: Ground
     uniqueID: 2767450379
     locked: 0
+  - name: Fruit
+    uniqueID: 2442393853
+    locked: 0
