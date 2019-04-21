@@ -26,7 +26,9 @@ public class Generator : MonoBehaviour
         fruitTimer -= Time.deltaTime;
         if(fruitTimer <= 0)
         {
-            fruitTimer = 5;
+            fruitTimer = Random.Range(2f, 5f);
+            if(obsTimer < 1f)
+                obsTimer += 1;
 
             GameObject clone = Instantiate(fruitPrefab, new Vector3(10, Random.Range(-2.5f, 2.5f), 0), Quaternion.identity);
             fruitList.Add(clone);
@@ -35,7 +37,9 @@ public class Generator : MonoBehaviour
         obsTimer -= Time.deltaTime;
         if (obsTimer <= 0)
         {
-            obsTimer = 5;
+            obsTimer = Random.Range(3f, 8f);
+            if(fruitTimer < 1f)
+                fruitTimer += 1;
 
             GameObject clone = Instantiate(obsPrefab, new Vector3(10, -2.78f, 0), Quaternion.identity);
             obsList.Add(clone);

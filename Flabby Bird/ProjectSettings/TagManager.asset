@@ -47,3 +47,6 @@ TagManager:
   - name: Fruit
     uniqueID: 2442393853
     locked: 0
+  - name: Player
+    uniqueID: 3321625271
+    locked: 0
