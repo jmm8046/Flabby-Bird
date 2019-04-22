@@ -793,7 +793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9df19cd678cbbc448b2ad8fca66af9f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 1
+  scrollSpeed: 1.5
   generator: {fileID: 2042071778}
   ground: {fileID: 5765299}
   background: {fileID: 1788243415}
@@ -1077,9 +1077,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 523db97e5714abd4883abd9c7fcc20a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitPrefab: {fileID: 7759395341369442763, guid: 880bd344611c9384d99cd02f576235fa,
+  applePrefab: {fileID: 6700756476987482617, guid: 86371c1d58ef35a458d6926754b16134,
+    type: 3}
+  strawPrefab: {fileID: 8740773066680300215, guid: 3c5529df23f98614d8874ad30188d6e2,
+    type: 3}
+  melonPrefab: {fileID: 6428725226107075209, guid: 3380572984353574bb4c8b9f9dda533d,
     type: 3}
   obsPrefab: {fileID: 523515642652498697, guid: b94b2012ee1fce246a7bd074d077f7b4,
+    type: 3}
+  treePrefab: {fileID: 3712797281995799996, guid: b83ac4f96ea8e3f4dad1ec452e42246c,
     type: 3}
 --- !u!4 &2042071779
 Transform:
