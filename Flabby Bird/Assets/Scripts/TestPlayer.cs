@@ -7,6 +7,8 @@ public class TestPlayer : MonoBehaviour
     [SerializeField] float jumpForce;
 
     private bool isJumping;
+    private bool doubleJump;
+    private bool wasGrounded;
 
     private Animator anim;
 
@@ -17,6 +19,8 @@ public class TestPlayer : MonoBehaviour
     void Start()
     {
         isJumping = false;
+        doubleJump = false;
+        wasGrounded = false;
 
         body = GetComponent<Rigidbody2D>();
         circle = GetComponent<CircleCollider2D>();
@@ -26,11 +30,22 @@ public class TestPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             isJumping = true;
             anim.SetBool("isJumping", isJumping);
         }
+        else if (Input.GetButtonDown("Jump") && doubleJump)
+        {
+            isJumping = true;
+            doubleJump = false;
+            anim.SetBool("isJumping", isJumping);
+        }
+
+        if (!wasGrounded && IsGrounded())
+            OnLanding();
+
+        wasGrounded = IsGrounded();
     }
 
     private void FixedUpdate()
@@ -39,12 +54,18 @@ public class TestPlayer : MonoBehaviour
         {
             body.velocity = new Vector2(body.velocity.x, jumpForce);
             isJumping = false;
-            anim.SetBool("isJumping", isJumping);
+            anim.SetBool("isJumping", true);
         }
     }
 
     public bool IsGrounded()
     {
         return Physics2D.OverlapCircle(circle.bounds.center, circle.radius + 0.3f, LayerMask.GetMask("Ground"));
+    }
+
+    public void OnLanding()
+    {
+        doubleJump = true;
+        anim.SetBool("isJumping", false);
     }
 }
