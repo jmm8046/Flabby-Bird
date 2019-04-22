@@ -8,6 +8,8 @@ public class TestPlayer : MonoBehaviour
 
     private bool isJumping;
 
+    private Animator anim;
+
     private Rigidbody2D body;
     private CircleCollider2D circle;
 
@@ -18,6 +20,7 @@ public class TestPlayer : MonoBehaviour
 
         body = GetComponent<Rigidbody2D>();
         circle = GetComponent<CircleCollider2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,6 +29,7 @@ public class TestPlayer : MonoBehaviour
         if(Input.GetButtonDown("Jump") && IsGrounded())
         {
             isJumping = true;
+            anim.SetBool("isJumping", isJumping);
         }
     }
 
@@ -35,6 +39,7 @@ public class TestPlayer : MonoBehaviour
         {
             body.velocity = new Vector2(body.velocity.x, jumpForce);
             isJumping = false;
+            anim.SetBool("isJumping", isJumping);
         }
     }
 
