@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5202722505130657004}
   - component: {fileID: 4719696343918776401}
   - component: {fileID: 5502506092085174368}
+  - component: {fileID: 4812081958162658476}
   m_Layer: 0
   m_Name: Fries
   m_TagString: Bad
@@ -96,3 +97,15 @@ CircleCollider2D:
   m_Offset: {x: -0.000730583, y: -0.002679718}
   serializedVersion: 2
   m_Radius: 0.1081162
+--- !u!114 &4812081958162658476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138641876828507076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7da7e288290a6746847f86b57bf03c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

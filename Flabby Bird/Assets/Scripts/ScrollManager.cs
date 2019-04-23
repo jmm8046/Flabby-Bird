@@ -77,4 +77,12 @@ public class ScrollManager : MonoBehaviour
             background.transform.SetPositionAndRotation(backStartPos, Quaternion.identity);
         }
     }
+
+    public void RemoveObject(GameObject obj)
+    {
+        if (obj.tag == "Obstacle")
+            obsList.Remove(obj);
+        else
+            fruitList.Remove(obj);
+    }
 }

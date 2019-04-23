@@ -73,16 +73,14 @@ public class TestPlayer : MonoBehaviour
         anim.SetBool("isJumping", false);
     }
 
-    void OnCollisionEnter(Collision col)
+    public void PlayerCollide(string tag)
     {
-        if (col.gameObject.tag == "Bad")
+        if (tag == "Bad")
         {
-            Destroy(gameObject);
             cholLvl = cholLvl + 1;
         }
-        else if (col.gameObject.tag == "Good")
+        else if (tag == "Good")
         {
-            Destroy(gameObject);
             if (cholLvl == 0)
             {
                 life = life + 1;
@@ -97,9 +95,9 @@ public class TestPlayer : MonoBehaviour
             }
         }
 
-        else if (col.gameObject.tag == "Obstacle")
+        else if (tag == "Obstacle")
         {
-            if (life == 0)
+            if (life == 1)
             {
 
             }

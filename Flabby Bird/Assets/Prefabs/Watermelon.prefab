@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2465033207089810200}
   - component: {fileID: 6784686306471400769}
   - component: {fileID: 4026689201187473425}
+  - component: {fileID: 3769424447764226441}
   m_Layer: 0
   m_Name: Watermelon
   m_TagString: Good
@@ -96,3 +97,15 @@ CircleCollider2D:
   m_Offset: {x: -0.064522624, y: -0.07256389}
   serializedVersion: 2
   m_Radius: 1.6952262
+--- !u!114 &3769424447764226441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6428725226107075209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7da7e288290a6746847f86b57bf03c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
