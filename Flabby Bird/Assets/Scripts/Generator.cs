@@ -39,7 +39,7 @@ public class Generator : MonoBehaviour
             if (treeTimer < 1f)
                 treeTimer += 1;
 
-            int foodSelect = Random.Range(0, 8);
+            int foodSelect = Random.Range(0, 11);
 
             if (foodSelect == 0)
             {
@@ -56,19 +56,19 @@ public class Generator : MonoBehaviour
                 GameObject clone = Instantiate(melonPrefab, new Vector3(10, Random.Range(-2.5f, 2.5f), 0), Quaternion.identity);
                 foodList.Add(clone);
             }
-            else if (foodSelect == 3 || foodSelect == 6)
+            else if (foodSelect == 3 || foodSelect == 6 || foodSelect == 9)
             {
-                GameObject clone = Instantiate(burgrPrefab, new Vector3(10, Random.Range(-2.5f, 0f), 0), Quaternion.identity);
+                GameObject clone = Instantiate(burgrPrefab, new Vector3(10, Random.Range(-2.5f, -1f), 0), Quaternion.identity);
                 foodList.Add(clone);
             }
-            else if (foodSelect == 5 || foodSelect == 7)
+            else if (foodSelect == 5 || foodSelect == 7 || foodSelect == 10)
             {
-                GameObject clone = Instantiate(pizzaPrefab, new Vector3(10, Random.Range(-2.5f, 0f), 0), Quaternion.identity);
+                GameObject clone = Instantiate(pizzaPrefab, new Vector3(10, Random.Range(-2.5f, -1f), 0), Quaternion.identity);
                 foodList.Add(clone);
             }
-            else if (foodSelect == 5 || foodSelect == 8)
+            else if (foodSelect == 5 || foodSelect == 8 || foodSelect == 11)
             {
-                GameObject clone = Instantiate(friesPrefab, new Vector3(10, Random.Range(-2.5f, 0f), 0), Quaternion.identity);
+                GameObject clone = Instantiate(friesPrefab, new Vector3(10, Random.Range(-2.5f, -1f), 0), Quaternion.identity);
                 foodList.Add(clone);
             }
         }
