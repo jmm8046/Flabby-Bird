@@ -114,4 +114,9 @@ public class TestPlayer : MonoBehaviour
     {
         return life;
     }
+    
+    public int GetChol()
+    {
+        return cholLvl;
+    }
 }
