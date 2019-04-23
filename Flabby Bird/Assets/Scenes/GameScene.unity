@@ -2061,7 +2061,7 @@ GameObject:
   - component: {fileID: 1650687507}
   - component: {fileID: 1650687506}
   m_Layer: 5
-  m_Name: CholesterolBase (1)
+  m_Name: CholesterolCap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

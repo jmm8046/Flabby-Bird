@@ -95,6 +95,7 @@ public class TestPlayer : MonoBehaviour
 
         else if (tag == "Obstacle")
         {
+            anim.SetBool("isHit", true);
             if (life == 1)
             {
                 life = life - 1;
