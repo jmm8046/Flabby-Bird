@@ -9,6 +9,8 @@ public class TestPlayer : MonoBehaviour
     private bool isJumping;
     private bool doubleJump;
     private bool wasGrounded;
+    private int cholLvl;
+    private int life;
 
     private Animator anim;
 
@@ -21,6 +23,8 @@ public class TestPlayer : MonoBehaviour
         isJumping = false;
         doubleJump = false;
         wasGrounded = false;
+        cholLvl = 0;
+        life = 3;
 
         body = GetComponent<Rigidbody2D>();
         circle = GetComponent<CircleCollider2D>();
@@ -67,5 +71,43 @@ public class TestPlayer : MonoBehaviour
     {
         doubleJump = true;
         anim.SetBool("isJumping", false);
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Bad")
+        {
+            Destroy(gameObject);
+            cholLvl = cholLvl + 1;
+        }
+        else if (col.gameObject.tag == "Good")
+        {
+            Destroy(gameObject);
+            if (cholLvl == 0)
+            {
+                life = life + 1;
+            }
+            else if (cholLvl == 3)
+            {
+                cholLvl = 3;
+            }
+            else
+            {
+                cholLvl = cholLvl - 1;
+            }
+        }
+
+        else if (col.gameObject.tag == "Obstacle")
+        {
+            if (life == 0)
+            {
+
+            }
+            else
+            {
+                life = life - 1;
+                cholLvl = 0;
+            }
+        }
     }
 }
