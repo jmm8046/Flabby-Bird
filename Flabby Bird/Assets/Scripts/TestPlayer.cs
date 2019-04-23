@@ -51,6 +51,8 @@ public class TestPlayer : MonoBehaviour
             OnLanding();
 
         wasGrounded = IsGrounded();
+
+
     }
 
     private void FixedUpdate()
@@ -107,6 +109,7 @@ public class TestPlayer : MonoBehaviour
                 life = life - 1;
                 cholLvl = 0;
             }
+            anim.SetBool("isHit", false);
         }
     }
 
