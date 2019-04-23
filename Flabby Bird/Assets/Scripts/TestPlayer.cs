@@ -96,6 +96,7 @@ public class TestPlayer : MonoBehaviour
         {
             if (life == 1)
             {
+                life = life - 1;
                 Debug.Log("Dead");
             }
             else
@@ -104,5 +105,10 @@ public class TestPlayer : MonoBehaviour
                 cholLvl = 0;
             }
         }
+    }
+
+    public int GetLife()
+    {
+        return life;
     }
 }
