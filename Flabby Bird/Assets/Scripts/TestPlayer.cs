@@ -18,6 +18,14 @@ public class TestPlayer : MonoBehaviour
     private Rigidbody2D body;
     private CircleCollider2D circle;
 
+    public AudioSource foodSound;
+    public AudioSource badFoodSound;
+    public AudioSource hurtSound;
+    public AudioSource deathSound;
+    public AudioSource jumpSound;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +67,7 @@ public class TestPlayer : MonoBehaviour
     {
         if(isJumping)
         {
+            jumpSound.Play();
             body.velocity = new Vector2(body.velocity.x, jumpForce);
             isJumping = false;
             anim.SetBool("isJumping", true);
@@ -80,11 +89,13 @@ public class TestPlayer : MonoBehaviour
     {
         if (tag == "Bad")
         {
+            badFoodSound.Play();
             if(cholLvl < 2)
                 cholLvl = cholLvl + 1;
         }
         else if (tag == "Good")
         {
+            foodSound.Play();
             if (cholLvl == 0)
             {
                 life = life + 1;
@@ -100,12 +111,14 @@ public class TestPlayer : MonoBehaviour
             anim.SetBool("isHit", true);
             if (life == 1)
             {
+                deathSound.Play();
                 life = life - 1;
                 Debug.Log("Dead");
                 SceneManager.LoadScene("EndGame");
             }
             else
             {
+                hurtSound.Play();
                 life = life - 1;
                 cholLvl = 0;
             }
