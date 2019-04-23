@@ -16,9 +16,9 @@ public class Generator : MonoBehaviour
     private List<GameObject> foodList;
     private List<GameObject> obsList;
 
-    private float foodTimer = 5;
-    private float obsTimer = 6;
-    private float treeTimer = 8;
+    private float foodTimer = 3;
+    private float obsTimer = 4;
+    private float treeTimer = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -33,13 +33,13 @@ public class Generator : MonoBehaviour
         foodTimer -= Time.deltaTime;
         if(foodTimer <= 0)
         {
-            foodTimer = Random.Range(2f, 5f);
+            foodTimer = Random.Range(2f, 4f);
             if (obsTimer < 1f)
                 obsTimer += 1;
             if (treeTimer < 1f)
                 treeTimer += 1;
 
-            int foodSelect = Random.Range(0, 5);
+            int foodSelect = Random.Range(0, 8);
 
             if (foodSelect == 0)
             {
@@ -56,17 +56,17 @@ public class Generator : MonoBehaviour
                 GameObject clone = Instantiate(melonPrefab, new Vector3(10, Random.Range(-2.5f, 2.5f), 0), Quaternion.identity);
                 foodList.Add(clone);
             }
-            else if (foodSelect == 3)
+            else if (foodSelect == 3 || foodSelect == 6)
             {
                 GameObject clone = Instantiate(burgrPrefab, new Vector3(10, Random.Range(-2.5f, 0f), 0), Quaternion.identity);
                 foodList.Add(clone);
             }
-            else if (foodSelect == 5)
+            else if (foodSelect == 5 || foodSelect == 7)
             {
                 GameObject clone = Instantiate(pizzaPrefab, new Vector3(10, Random.Range(-2.5f, 0f), 0), Quaternion.identity);
                 foodList.Add(clone);
             }
-            else if (foodSelect == 5)
+            else if (foodSelect == 5 || foodSelect == 8)
             {
                 GameObject clone = Instantiate(friesPrefab, new Vector3(10, Random.Range(-2.5f, 0f), 0), Quaternion.identity);
                 foodList.Add(clone);
@@ -76,7 +76,7 @@ public class Generator : MonoBehaviour
         obsTimer -= Time.deltaTime;
         if (obsTimer <= 0)
         {
-            obsTimer = Random.Range(3f, 6f);
+            obsTimer = Random.Range(2f, 4f);
             if(foodTimer < 1f)
                 foodTimer += 1;
             if (treeTimer < 1f)
@@ -89,13 +89,13 @@ public class Generator : MonoBehaviour
         treeTimer -= Time.deltaTime;
         if(treeTimer <= 0)
         {
-            treeTimer = Random.Range(4f, 8f);
+            treeTimer = Random.Range(3f, 5f);
             if (foodTimer < 1f)
                 foodTimer += 1;
             if (obsTimer < 1f)
                 obsTimer += 1;
 
-            GameObject clone = Instantiate(treePrefab, new Vector3(10, -1.55f, 0), Quaternion.identity);
+            GameObject clone = Instantiate(treePrefab, new Vector3(10, -1.11f, 0), Quaternion.identity);
             obsList.Add(clone);
         }
     }

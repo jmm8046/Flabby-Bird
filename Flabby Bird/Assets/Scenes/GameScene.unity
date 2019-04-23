@@ -2399,7 +2399,7 @@ MonoBehaviour:
     type: 3}
   obsPrefab: {fileID: 523515642652498697, guid: b94b2012ee1fce246a7bd074d077f7b4,
     type: 3}
-  treePrefab: {fileID: 3712797281995799996, guid: b83ac4f96ea8e3f4dad1ec452e42246c,
+  treePrefab: {fileID: 7891417693861688451, guid: b83ac4f96ea8e3f4dad1ec452e42246c,
     type: 3}
 --- !u!4 &2042071779
 Transform:

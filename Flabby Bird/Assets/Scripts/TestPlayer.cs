@@ -35,12 +35,12 @@ public class TestPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded() && cholLvl < 2)
         {
             isJumping = true;
             anim.SetBool("isJumping", isJumping);
         }
-        else if (Input.GetButtonDown("Jump") && doubleJump)
+        else if (Input.GetButtonDown("Jump") && doubleJump && cholLvl < 1)
         {
             isJumping = true;
             doubleJump = false;
