@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8726611772727568093}
   - component: {fileID: 8187988656857603864}
   - component: {fileID: 1508288961542116703}
+  - component: {fileID: 4274826943567950731}
   m_Layer: 0
   m_Name: TreeObstacle
   m_TagString: Obstacle
@@ -96,3 +97,15 @@ CircleCollider2D:
   m_Offset: {x: -0.028796196, y: 0.011188984}
   serializedVersion: 2
   m_Radius: 1.9009168
+--- !u!114 &4274826943567950731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3712797281995799996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83224d04ea52cec4e90b33d2bfb65745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2873835005759304149}
   - component: {fileID: 4446044097706471648}
   - component: {fileID: 6017049343773317827}
+  - component: {fileID: 3636660824841326232}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -130,3 +131,15 @@ PolygonCollider2D:
       - {x: 0.11, y: -0.61}
       - {x: 0.26999998, y: -0.52}
       - {x: 0.34, y: -0.48}
+--- !u!114 &3636660824841326232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523515642652498697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83224d04ea52cec4e90b33d2bfb65745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

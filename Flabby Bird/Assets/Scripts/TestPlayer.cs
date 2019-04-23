@@ -77,17 +77,14 @@ public class TestPlayer : MonoBehaviour
     {
         if (tag == "Bad")
         {
-            cholLvl = cholLvl + 1;
+            if(cholLvl < 2)
+                cholLvl = cholLvl + 1;
         }
         else if (tag == "Good")
         {
             if (cholLvl == 0)
             {
                 life = life + 1;
-            }
-            else if (cholLvl == 3)
-            {
-                cholLvl = 3;
             }
             else
             {
@@ -99,7 +96,7 @@ public class TestPlayer : MonoBehaviour
         {
             if (life == 1)
             {
-
+                Debug.Log("Dead");
             }
             else
             {
