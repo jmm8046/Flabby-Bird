@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Load_Game : MonoBehaviour
-{
-    // Start is called before the first frame update
-    public void changeScene(string name)
+{ 
+    public void loadGameScene()
     {
-    	Application.LoadLevel(name);
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void loadTitleScene()
+    {
+        SceneManager.LoadScene("Title");
     }
 }

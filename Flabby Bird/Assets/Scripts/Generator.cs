@@ -76,7 +76,7 @@ public class Generator : MonoBehaviour
         obsTimer -= Time.deltaTime;
         if (obsTimer <= 0)
         {
-            obsTimer = Random.Range(2f, 4f);
+            obsTimer = Random.Range(1.5f, 3f);
             if(foodTimer < 1f)
                 foodTimer += 1;
             if (treeTimer < 1f)
