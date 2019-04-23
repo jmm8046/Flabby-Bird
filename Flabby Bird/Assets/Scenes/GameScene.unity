@@ -1083,6 +1083,12 @@ MonoBehaviour:
     type: 3}
   melonPrefab: {fileID: 6428725226107075209, guid: 3380572984353574bb4c8b9f9dda533d,
     type: 3}
+  burgrPrefab: {fileID: 8059484208453651006, guid: 0f4f75de60ad31a43a868667b271c10a,
+    type: 3}
+  pizzaPrefab: {fileID: 1791989750576314107, guid: 482874479c084634abff4b9dd036f84a,
+    type: 3}
+  friesPrefab: {fileID: 3138641876828507076, guid: b0b8d8ee1ef3e304e890d0fb5b7f5222,
+    type: 3}
   obsPrefab: {fileID: 523515642652498697, guid: b94b2012ee1fce246a7bd074d077f7b4,
     type: 3}
   treePrefab: {fileID: 3712797281995799996, guid: b83ac4f96ea8e3f4dad1ec452e42246c,
