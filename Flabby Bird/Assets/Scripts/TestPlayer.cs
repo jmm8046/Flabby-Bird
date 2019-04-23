@@ -29,6 +29,7 @@ public class TestPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ScoreScripte.resetScore();
         isJumping = false;
         doubleJump = false;
         wasGrounded = false;
@@ -43,6 +44,8 @@ public class TestPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ScoreScripte.ScoreValue += 1;
+
         if (Input.GetButtonDown("Jump") && IsGrounded() && cholLvl < 2)
         {
             isJumping = true;
