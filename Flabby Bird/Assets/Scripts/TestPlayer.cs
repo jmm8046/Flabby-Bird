@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TestPlayer : MonoBehaviour
 {
@@ -98,6 +99,7 @@ public class TestPlayer : MonoBehaviour
             {
                 life = life - 1;
                 Debug.Log("Dead");
+                SceneManager.LoadScene("EndGame");
             }
             else
             {
