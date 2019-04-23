@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TestPlayer : MonoBehaviour
 {
@@ -34,12 +35,12 @@ public class TestPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded() && cholLvl < 2)
         {
             isJumping = true;
             anim.SetBool("isJumping", isJumping);
         }
-        else if (Input.GetButtonDown("Jump") && doubleJump)
+        else if (Input.GetButtonDown("Jump") && doubleJump && cholLvl < 1)
         {
             isJumping = true;
             doubleJump = false;
@@ -50,6 +51,8 @@ public class TestPlayer : MonoBehaviour
             OnLanding();
 
         wasGrounded = IsGrounded();
+
+
     }
 
     private void FixedUpdate()
@@ -94,15 +97,29 @@ public class TestPlayer : MonoBehaviour
 
         else if (tag == "Obstacle")
         {
+            anim.SetBool("isHit", true);
             if (life == 1)
             {
+                life = life - 1;
                 Debug.Log("Dead");
+                SceneManager.LoadScene("EndGame");
             }
             else
             {
                 life = life - 1;
                 cholLvl = 0;
             }
+            anim.SetBool("isHit", false);
         }
+    }
+
+    public int GetLife()
+    {
+        return life;
+    }
+    
+    public int GetChol()
+    {
+        return cholLvl;
     }
 }
